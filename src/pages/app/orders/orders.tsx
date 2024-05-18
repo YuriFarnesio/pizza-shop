@@ -51,8 +51,8 @@ export function Orders() {
                         <span className="sr-only">Detalhes do pedido</span>
                       </Button>
                     </TableCell>
-                    <TableCell className="font-mono text-sm font-medium">
-                      1fsndklfnsda32jk342
+                    <TableCell className="font-mono text-xs font-medium">
+                      821e78f7asdhdf128h
                     </TableCell>
                     <TableCell className="text-muted-foreground">
                       há 15 minutos
@@ -76,7 +76,6 @@ export function Orders() {
                         Aprovar
                       </Button>
                     </TableCell>
-
                     <TableCell>
                       <Button variant="ghost" size="xs">
                         <X className="mr-2 h-3 w-3" />
