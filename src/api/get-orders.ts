@@ -1,6 +1,6 @@
 import { api } from '@/lib/axios'
 
-export interface GerOrdersQuery {
+export interface GerOrdersParams {
   pageIndex?: number | null
   orderId?: string | null
   customerName?: string | null
@@ -27,7 +27,7 @@ export async function getOrders({
   orderId,
   customerName,
   status,
-}: GerOrdersQuery) {
+}: GerOrdersParams) {
   const response = await api.get<GetOrdersResponse>('/orders', {
     params: {
       pageIndex,
