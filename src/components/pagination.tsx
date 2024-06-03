@@ -7,7 +7,7 @@ import {
 
 import { Button } from './ui/button'
 
-export interface PaginationProps {
+interface PaginationProps {
   pageIndex: number
   totalCount: number
   perPage: number
@@ -20,7 +20,7 @@ export function Pagination({
   totalCount,
   onPageChange,
 }: PaginationProps) {
-  const pages = Math.ceil(totalCount / perPage)
+  const pages = Math.ceil(totalCount / perPage) || 1
 
   return (
     <div className="flex items-center justify-between">
@@ -51,11 +51,10 @@ export function Pagination({
             <ChevronLeft className="h-4 w-4" />
             <span className="sr-only">Página anterior</span>
           </Button>
-
           <Button
             variant="outline"
             onClick={() => onPageChange(pageIndex + 1)}
-            disabled={pageIndex <= pageIndex + 1}
+            disabled={pages <= pageIndex + 1}
             className="h-8 w-8 p-0"
           >
             <ChevronRight className="h-4 w-4" />
@@ -64,7 +63,7 @@ export function Pagination({
           <Button
             variant="outline"
             onClick={() => onPageChange(pages - 1)}
-            disabled={pageIndex <= pageIndex + 1}
+            disabled={pages <= pageIndex + 1}
             className="h-8 w-8 p-0"
           >
             <ChevronsRight className="h-4 w-4" />
