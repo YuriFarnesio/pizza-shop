@@ -87,7 +87,7 @@ export function AccountMenu() {
             disabled={isSigningOut}
             className="text-rose-500 dark:text-rose-400"
           >
-            <button className="w-full" onClick={() => signOutFn()}>
+            <button onClick={() => signOutFn()} className="w-full">
               <LogOut className="mr-2 h-4 w-4" />
               <span>Sair</span>
             </button>

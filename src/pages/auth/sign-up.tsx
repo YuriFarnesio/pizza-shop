@@ -71,7 +71,7 @@ export function SignUp() {
             </p>
           </div>
 
-          <form className="space-y-4" onSubmit={handleSubmit(handleSignUp)}>
+          <form onSubmit={handleSubmit(handleSignUp)} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="restaurantName">Nome do estabelecimento</Label>
               <Input
