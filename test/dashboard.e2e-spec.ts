@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test'
 test('display month revenue metric', async ({ page }) => {
   await page.goto('/', { waitUntil: 'networkidle' })
 
-  await expect(page.getByText('R$ 200,00')).toBeVisible()
+  await expect(page.getByText('R$ 200,00', { exact: true })).toBeVisible()
   await expect(page.getByText('+10% em relação ao mês passado')).toBeVisible()
 })
 
